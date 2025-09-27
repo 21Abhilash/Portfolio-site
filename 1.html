@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Abhilash Abhi - Full-stack Developer Portfolio showcasing projects, skills, and contact.">
+  <title>Abhilash Portfolio</title>
+
+  <!-- Google Fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
+
+  <!-- Font Awesome Icons -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"/>
+
+  <!-- Stylesheet -->
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <!-- Header / Navbar -->
+  <header class="header" id="home">
+    <nav class="navbar">
+      <a href="#home" class="logo">Abhilash</a>
+      <button class="menu-btn" aria-label="Toggle Menu">&#9776;</button>
+      <ul class="nav-links">
+        <li><a href="#about">About</a></li>
+        <li><a href="#projects">Projects</a></li>
+        <li><a href="#skills">Skills</a></li>
+        <li><a href="#contact">Contact</a></li>
+        <li><button id="darkToggle" aria-label="Toggle Dark Mode">🌙</button></li>
+
+      </ul>
+    </nav>
+
+    <section class="hero">
+      <h1>Hi, I'm <span>Abhilash</span></h1>
+      <p>Full-stack Developer building scalable web apps with clean architecture and engaging UX.</p>
+      <div class="hero-buttons">
+        <a href="#projects" class="btn">View Projects</a>
+        <a href="https://hosturl.site/Ua5D5m" target="_blank" class="btn ghost">Hire Me</a>
+        <a href="assets/Abhilash_Resume.dox" download="Abhilash_Resume.pdf" class="btn ghost">Download Resume</a>
+
+      </div>
+    </section>
+  </header>
+
+  <!-- About Section -->
+  <section id="about" class="section about">
+    <div class="container fade-in">
+      <h2>About Me</h2>
+      <p>I am a Computer Science student and Full-stack developer with expertise in Spring Boot, React, and modern web technologies. I enjoy building scalable, maintainable applications with clean UX/UI.</p>
+
+    </div>
+  </section>
+
+  <!-- Projects Section -->
+  <section id="projects" class="section projects">
+    <div class="container fade-in">
+      <h2>Projects</h2>
+      <div class="project-grid">
+        <article class="project-card" data-title="RideHub — Taxi Booking" data-description="A full-stack taxi booking app for Udupi with realtime tracking and payment integration." data-tags="Spring,React,MySQL">
+          <h3>RideHub — Taxi Booking</h3>
+          <p>Booking app covering all areas and villages in Udupi with realtime tracking.</p>
+          <div class="pill-container"><span class="pill">Spring</span><span class="pill">React</span></div>
+        </article>
+
+        <article class="project-card" data-title="Resume Builder" data-description="Interactive resume builder to craft ATS-friendly resumes." data-tags="HTML,CSS,JS">
+          <h3>Resume Builder</h3>
+          <p>Create professional resumes with templates and PDF export.</p>
+          <div class="pill-container"><span class="pill">HTML</span><span class="pill">JS</span></div>
+        </article>
+
+        <article class="project-card" data-title="Safety Report Tool" data-description="12-page report generator for construction worker safety awareness." data-tags="Python,DataViz">
+          <h3>Safety Report Tool</h3>
+          <p>Generates reports and visualizations for safety campaigns.</p>
+          <div class="pill-container"><span class="pill">Python</span><span class="pill">DataViz</span></div>
+        </article>
+
+        <article class="project-card" data-title="Railway Reservation System" data-description="A full-stack railway ticket booking system with seat selection, availability check, and payment integration." data-tags="Java,Spring,MySQL,React">
+          <h3>Railway Reservation System</h3>
+          <p>Book train tickets online with seat selection, live availability check, and payment gateway integration.</p>
+          <div class="pill-container"><span class="pill">Java</span><span class="pill">Spring</span><span class="pill">MySQL</span><span class="pill">React</span></div>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- Skills Section -->
+  <section id="skills" class="section skills">
+    <div class="container fade-in">
+      <h2>Skills & Tools</h2>
+      <div class="skills-grid">
+        <div class="skill"><strong>Languages:</strong> Java, JavaScript, SQL, Python</div>
+        <div class="skill"><strong>Frameworks:</strong> Spring Boot, React, Express</div>
+        <div class="skill"><strong>Tools:</strong> Git, Docker, VS Code, Figma</div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Contact Section -->
+  <section id="contact" class="section contact">
+    <div class="container fade-in">
+      <h2>Contact Me</h2>
+      <form id="contact-form" novalidate>
+        <div class="form-group"><input type="text" id="name" placeholder="Your Name" required></div>
+        <div class="form-group"><input type="email" id="email" placeholder="Your Email" required></div>
+        <div class="form-group"><textarea id="message" rows="5" placeholder="Your Message" required></textarea></div>
+        <button type="submit" class="btn">Send Message</button>
+        <p id="formStatus" class="muted"></p>
+      </form>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="footer fade-in">
+    <p>© <span id="year"></span> Abhilash. Built with ❤️</p>
+    <div class="footer-social">
+      <a href="https://github.com/21Abhilash" target="_blank" aria-label="GitHub"><i class="fab fa-github"></i></a>
+      <a href="https://hosturl.site/Ua5D5m" target="_blank" aria-label="LinkedIn"><i class="fab fa-linkedin"></i></a>
+    </div>
+  </footer>
+
+  <!-- Project Modal -->
+  <div id="modal" class="modal">
+    <div class="modal-content">
+      <button id="closeModal" class="close">✕</button>
+      <h3 id="modalTitle"></h3>
+      <p id="modalDesc"></p>
+      <div id="modalTags"></div>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
